@@ -1,0 +1,168 @@
+Link1:
+https://drive.google.com/open?id=0Bz8-ln3QUcV4U3kzVXFzMUI0VUE
+
+Link2:
+https://mega.nz/#F!rhAFCbIa!F4XoHfIYoPYgJ-V1TUyP2A
+
+beta9+6
+
+Some bug fixing.
+
+beta9+5
+
+- Claymore Dual 9.3
+- ccminer for Bitcore,
+- updated config for YIIMP, Zpool
+- added pool luckpool.org for tests,
+- added pool.coin-miners.info
+- test feature for yiimp like pools (coin-miners also) in multicoin algos. As soon as pool's API doesn't provide profitability for each coin 
+only for whole algo, MC detects the hashrate for each coin on pool, and coin with higher hashrate acquires higher priority in MC, so called "croud effect".
+
+beta9+4
+
+- added key "hidecolumngr1" for "general" section, hides "Price", "PowerCost", "Fees" columns, 
+- added key "hidecolumngr2" for "general" section, hides "RejectSpeed", "TopAvgSp", "AcSpWrk", "MU", "PoolFee" columns,
+- added context tooltips for headers,
+- added key "poolenabled" for "pool" section. Enables/disables complete pool.
+
+beta9+3
+
+or extra column coin "earn" in MC currency.
+
+beta9+2
+
+extra column coin "balance" in MC currency.
+
+
+beta9+1
+
+exchange rate for dynamics is averaged by "statwindow"
+
+beta9
+
+-Claymore Dual Miner 9.1
+
+-Fix for fee calculations in pools fee and miners with Devfee
+-new key "wtmurl". Here can be entered a link via anonymiser, if WTM is blocked in some countries
+for example "wtmurl": "http://anonymouse.org/cgi-bin/anon-www.cgi/http://whattomine.com/coins.json",
+
+
+beta8.5
+-check-boxes can be checked in running mode, not on stop only;
+-price dynamics offset key in percent for "general", by default "dynoffset":10. Flactuation for setting "pump/dump" status.
+-price dynamics calculation frequency, key for "general" in minutes, by default "dyncheck":1.
+-key "showinactive" for "general" if you want to see coins with "active":false status in "pool" menu. By default enabled.
+-key "coloring" for "general", if you want cells to be colored. By default enabled.
+
+
+beta8.4
+
+-check-boxes for coins enable/disable;
+-price dynamics for exchange rate = current exrate/exrate 24h and profitability = current profitability/profitability 24h
+-"usewindow" can be set globally now in "general" section
+-layout delay for 30sec after manual grid sorting
+
+
+beta8.3
+
+pumps and dumps detection, daily price fluctuation more than 5%
+
+beta8.2
+
+idle mining implemented
+
+new key minidleseconds in "General" section
+and IdleMining checkbox on the form
+
+
+beta8.1
+
+Claymore Dual 9.0
+SGMiner Nist5mod
+
+-fixed pool fee for YIIMP
+-added support for Solariscoin, Pascallite, Musicoin, Karbowanec
+-changed output fields for "activity.log"
+
+
+beta8
+EWBF Zcash miner v.0.3.3b
+Claymore ZCash miner v.12.4
+NiceHash Excavator 1.1.4a
+
+- balance calculations improved.
+
+
+beta7
+Claymore Dual miner v.8.1
+
+-configs update for Nvidia Dual+Pascal
+-config update Zpool for Equihash on AMD
+
+Reads the "lagging" status from Whattomine and reduces Cweight in 10 times.
+
+
+
+
+beta6
+EWBF Zcash miner v.0.3.2b
+
+1) Delay for 1 min in gathering statistics about balance and speed. Allows applications GUI to be loaded quickly.
+
+2) TopAvgSp column for calculation average Worker speed. Additional key in "pools" section :
+
+  "avgspeedticks":10  - number of ticks for averaging worker speed value. 1 tick happens in 1 minute. Values can be from 1 to 60, if 0 then disabled. By default 10 ticks.
+
+
+
+beta5
+
+Claymore ZCash miner v.12.2
+EWBF Zcash miner v.0.3.1b
+CPUminer-opt-3.5.12-windows
+
+
+1) Added WTM Buffer. Radically reduces amount of API requests and accelerates refresh speed.
+ It reads the prices from WhatToMine with adjustable frequency. New keys in "general" block:
+
+        "wtmsyncperiod": 3,       time in minutes to refresh WTM prices, by default 3 minutes
+        "wtmbuffer": true,        enables or disables WTM Buffer. By default enabled.
+        "wtmextracoins":true,     enables prices for coins not included in basic list of WTM. By default enabled. If disabled, prices for coins with "PriceID" in algo section will not be accuired (beta2).
+
+2) For pools with self-defined profitabillity added possibility to switch to WTM-based. New key in "pool" section:
+        "pricewtm": true          by default is false.
+
+3) AikaPool attached.
+
+4) Test feature. Comparison for hashrates predefined/real and marking the difference with colores. Color intensity for undervaluted rates moves to red, overvaluated to yellow, difference +/- 5% of predefined is green.
+  
+
+
+beta4
+
+Claymore Dual ETH miner v.8.0
+
+“DualMining” for Claymore miner supported.
+
+Sample configs for dual-mining included.
+
+
+
+beta3 
+
+- added "active" key in pools section. If set to false disables the algo string.
+- API requests optimised
+- Zpool new algos added
+- Nicehash scale changed for Equihash.
+
+
+
+beta2
+
+- added key "priceid" in algo section. Gets WTM profitability for definite coin. Should be equal to WTM CoinId.
+
+
+
+beta 1 (stable)
+
+- basic version.
